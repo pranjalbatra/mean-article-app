@@ -1,0 +1,21 @@
+
+      <!-- Toolbar -->
+      <div class="toolbar" role="banner">
+        <img
+          width="40"
+          alt="Angular Logo"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+        />
+        <a class="nav-link" href="#" routerLink="/" class="nav-link">Article Manager</a>
+          <div class="spacer"></div>
+          <a href="#" routerLink="/" class="nav-link" title="Home">Home</a>
+          <ng-template [ngIf]="token == ''" [ngIfElse]="loggedIn"><a href="#" routerLink="/login" class="nav-link" title="Log In">Log In</a></ng-template>
+          <ng-template #loggedIn>
+              <a href="#" routerLink="/myarticles" class="nav-link" title="My Articles">My Articles</a>
+              <a href="#" routerLink="/create" class="nav-link" title="Create">Create</a>
+              <a href="#" routerLink="/logout" class="nav-link" title="Log Out">Log Out</a>
+          </ng-template>
+      </div>
+      <div class="content" role="Main">
+        <router-outlet></router-outlet>
+      </div>
